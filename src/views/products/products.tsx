@@ -23,7 +23,7 @@ export const Products: React.FC = () => {
 
   const handleOpenModal = useCallback((product: Product) => {
     setSelectedProduct(product);
-    const params = new URLSearchParams(searchParams.toString());
+    const params = new URLSearchParams(window.location.search);
     params.set("product-id", product.id);
     window.history.pushState(null, "", `?${params.toString()}`);
   }, []);
