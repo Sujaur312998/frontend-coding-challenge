@@ -1,5 +1,10 @@
 import { Home } from "@/views/home";
+import { Suspense } from "react";
 
 export default function HomeRoot() {
-  return <Home />;
+  return (
+    <Suspense>
+      <Home />
+    </Suspense>
+  );
 }
